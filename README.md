@@ -1,7 +1,10 @@
 # Task
-Class Inheritance, Encapsulation and Polymorphism.
-#Laravel CRUD....
-Here I  add my e-commerce project ....
-This project is not completed....but i working this project at present time.
-I hope as soon as possible i complete this project(In-Sha-Allah).
-Please check (click branches option) my-new-branch.
+Class Inheritance, Encapsulation, and Polymorphism.
+
+##Laravel CRUD....
+Please check (click the branches option) master.
+Simple laravel crud operation and seeder
+
+
+seeder run command:   php artisan db:seed --class=ProductSeeder
+
