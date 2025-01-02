@@ -1,5 +1,5 @@
 # Task
-Class Inheritance, Encapsulation, and Polymorphism.
+Inheritance, Encapsulation, and Polymorphism.
 
 ##Laravel CRUD....
 Please check (click the branches option) master.
