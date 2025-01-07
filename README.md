@@ -3,8 +3,8 @@ Inheritance, Encapsulation, and Polymorphism.
 
 ##Laravel CRUD....
 Please check (click the branches option) master.
-Simple laravel crud operation and seeder
+Simple Laravel crud operation and all details master branch in readme file.
 
 
-seeder run command:   php artisan db:seed --class=ProductSeeder
+
 
