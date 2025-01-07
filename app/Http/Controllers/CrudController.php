@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class CrudController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('index',compact('products'));
+        $categories = Category::all();
+        return view('index',compact('products','categories'));
     }
 
     public function create(Request $request)
@@ -19,10 +21,11 @@ class CrudController extends Controller
         $request->validate([
             'name' =>'required',
             'description' =>'required',
+            'category_id' =>'required',
             'image' =>'required',
             'price' => 'required',
         ]);
-        
+
         // testing
         // return $request->all();
         Product::newProduct($request);
@@ -31,7 +34,9 @@ class CrudController extends Controller
 
     public function edit($id)
     {
-         return view('edit',['product'=>Product::find($id)]);
+         return view('edit',['product'=>Product::find($id),
+         'categories'     => Category::all(),
+        ]);
     }
 
     public function update(Request $request,$id)

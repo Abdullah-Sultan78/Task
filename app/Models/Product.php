@@ -31,6 +31,7 @@ class Product extends Model
     {
         self::$product =new Product();
         self::$product ->name           = $request->name;
+        self::$product ->category_id    = $request->category_id ;
         self::$product ->description    = $request->description;
         self::$product ->price          = $request->price;
         self::$product ->image          = self::getImageUrl($request);
@@ -56,6 +57,7 @@ class Product extends Model
         }
 
         self::$product ->name  = $request->name;
+        self::$product ->category_id  = $request->category_id;
         self::$product ->description  = $request->description;
         self::$product ->image= self::$imageUrl;
         self::$product ->price  = $request->price;
@@ -74,4 +76,9 @@ class Product extends Model
             }
             self::$product->delete();
     }
+
+    public function category(){
+        return $this ->BelongsTo(Category::class);
+    }
+
 }
