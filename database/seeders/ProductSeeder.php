@@ -15,11 +15,13 @@ class ProductSeeder extends Seeder
     {
         Product::insert([
             ['name' => 'Test1',
+            'category_id'=> 1,
             'description' => 'This is description',
             'image' =>'product.png',
             'price' =>'100'],
 
             ['name' => 'Test2',
+             'category_id'=> 1,
             'description' => 'This is description of product',
             'image' =>'product1.png',
             'price' =>'129']
